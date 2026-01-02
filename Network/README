@@ -16,7 +16,7 @@ The project currently implements a highly available network foundation (VPC) fea
 
 ## 📂 Project Structure
 
-```text
+```
 .
 ├── main.tf              # Main configuration calling the modules
 ├── variables.tf         # Root input variables
@@ -27,3 +27,4 @@ The project currently implements a highly available network foundation (VPC) fea
         ├── main.tf      # AWS Networking resources
         ├── variables.tf # Module-specific inputs
         └── outputs.tf   # Module-specific outputs
+```
