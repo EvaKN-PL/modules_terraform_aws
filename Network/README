@@ -49,5 +49,6 @@ Remember to destroy the infrastructure after training to avoid unnecessary AWS c
 
 ```
 terraform destroy
+```
 
 
