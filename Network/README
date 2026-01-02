@@ -46,8 +46,8 @@ The project currently implements a highly available network foundation (VPC) fea
 ⚠️ Cost Management
 
 Remember to destroy the infrastructure after training to avoid unnecessary AWS charges (especially for NAT Gateway and Elastic IP):
-
-```
+```bash
 terraform destroy 
+
 ```
 
