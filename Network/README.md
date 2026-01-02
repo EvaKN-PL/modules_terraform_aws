@@ -25,3 +25,24 @@ The project currently implements a highly available network foundation (VPC) fea
         ├── main.tf      # AWS Networking resources
         ├── variables.tf # Module-specific inputs
         └── outputs.tf   # Module-specific outputs 
+
+🚀 Getting Started
+
+**Prerequisites
+
+    - Terraform installed.
+    - AWS CLI configured with appropriate credentials.
+
+🔑 Key Features Learned
+
+   * Module Composition: Passing data between root and child modules.
+
+   * Data Sources: Dynamically discovering AWS infrastructure (AZs).
+
+   * Git Security: Using .gitignore to protect sensitive .tfvars files.
+
+   * Network Security: Implementing NAT Gateways for private subnet isolation.
+
+⚠️ Cost Management
+
+Remember to destroy the infrastructure after training to avoid unnecessary AWS charges (especially for NAT Gateway and Elastic IP)!!
