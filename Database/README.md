@@ -38,6 +38,22 @@ module "database" {
 <img width="500" height="300" alt="variables" src="https://github.com/user-attachments/assets/d0205e93-535a-49ea-bf86-0d13cd0d72d8" />
 
 
+⚠️ Crucial Best Practices:
+
+To maintain security and avoid accidental leaks of sensitive data (like db_password):
+
+  1. Do not hardcode variable values in main.tf.
+
+  2. Use a ```.tfvars file```: Create a terraform.tfvars file (and add it to .gitignore) to store your values:
+```Terraform
+  db_password = "your_strong_password"
+  db_user     = "admin"
+```
+  3. Environment Variables: Alternatively, use environment variables in your terminal (example in Linux):
+```Terraform
+export TF_VAR_db_password="your_strong_password"
+```
+
 📤 Outputs
 
 ```
