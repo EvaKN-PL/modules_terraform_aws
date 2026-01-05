@@ -12,9 +12,11 @@ This module follows a decoupled architecture where networking resources are inje
 
 🔑 Features
 
- *EC2 Instance Provisioning**: Creates an Amazon Linux 2023 instance.
- *Security Groups**: Automatically sets up an EC2 Security Group with dynamic SSH access rules.
- *SSH Access**: Uses an existing AWS Key Pair for secure authentication.
+ 1. EC2 Instance Provisioning: Creates an Amazon Linux 2023 instance.
+ 
+ 2. Security Groups: Automatically sets up an EC2 Security Group with dynamic SSH access rules.
+    
+ 3. SSH Access: Uses an existing AWS Key Pair for secure authentication.
 
 ## Usage
 
