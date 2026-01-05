@@ -4,7 +4,7 @@ This module provisions a managed AWS RDS MySQL instance within a private network
 
   🌟 Features
 
-   🔒 Network Isolation: The database is deployed in private subnets with publicly_accessible = false.
+   🔒 Network Isolation: The database is deployed in private subnets with ```publicly_accessible = false```.
 
    🌐 Subnet Management: Automatically creates a DB Subnet Group required for RDS deployment.
 
@@ -44,3 +44,9 @@ module "database" {
    db_instance_endpoint - The connection endpoint for the RDS instance
    db_instance_id - The ID of the RDS instance
 ```
+🚀 Getting Started
+
+```Prerequisites```
+
+- Terraform installed.
+- AWS CLI configured with appropriate credentials.
