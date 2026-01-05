@@ -16,6 +16,8 @@ The modules are organized into subdirectories, each representing a specific infr
 
    ... more modules to come (S3, RDS, IAM, etc.)
 
+   
+
 🚀 Getting Started
 Prerequisites
 
@@ -24,6 +26,8 @@ Prerequisites
   2. AWS CLI: Configured with appropriate credentials.
 
   3. SSH Key: An existing AWS Key Pair (if using the compute module).
+
+     
 
 🛠 Development Workflow
 
@@ -34,6 +38,8 @@ Prerequisites
   ```Plan```: Run terraform plan to see the execution plan.
 
   ```Apply```: Execute terraform apply to deploy the infrastructure.
+
+  
 
 📝 Best Practices applied
 
