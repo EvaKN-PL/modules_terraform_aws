@@ -17,9 +17,10 @@ module "compute" {
     source = "./modules/compute"
     env = "dev"
     vpc_id = module.network.vpc_id
-    subnet_id = module.network.public_subnet_ids
+    subnet_id = module.network.public_subnet_ids[0]
     my_ip = "${chomp(data.http.my_public_ip.response_body)}/32"
     instance_type = "t2.micro"
+    region = "eu-central-1"
 
     key_name = "linux-server-ewa"
   
