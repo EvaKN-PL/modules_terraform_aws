@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 module "s3" {
-    source = "./modules"
+    source = "./modules/s3_bucket"
 
     bucket_name       = "my-bucket-9979-dev"
     versioning_status = "Enabled"
