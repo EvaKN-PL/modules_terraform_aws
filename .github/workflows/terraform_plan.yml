@@ -38,3 +38,7 @@ jobs:
       - name: Terraform Plan
         working-directory: ./Network
         run: terraform plan
+
+      - name: Terraform Apply
+        working-directory: ./Network
+        run: terraform apply -auto-approve
