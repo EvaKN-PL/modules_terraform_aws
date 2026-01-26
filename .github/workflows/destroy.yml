@@ -6,6 +6,9 @@ on:
 jobs:
   destroy:
     runs-on: ubuntu-latest
+    env:
+      TF_VAR_region: "eu-central-1"
+      TF_VAR_env: "dev"
 
     steps:
       - uses: actions/checkout@v4
