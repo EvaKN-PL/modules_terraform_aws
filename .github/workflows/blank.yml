@@ -1,0 +1,25 @@
+name: 'Check VPC Module'
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'modules/vpc/**'    # Uruchom tylko, gdy zmieniły się pliki w tym folderze
+  pull_request:
+    paths:
+      - 'modules/vpc/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+      
+      - name: Terraform Init
+        working-directory: ./modules/vpc  # Kluczowe: wejdź do folderu przed komendą
+        run: terraform init -backend=false
+
+      - name: Terraform Validate
+        working-directory: ./modules/vpc
+        run: terraform validate
