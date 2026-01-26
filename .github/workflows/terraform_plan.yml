@@ -1,0 +1,40 @@
+name: 'AWS Terraform Plan'
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  terraform:
+    name: 'Terraform Plan'
+    runs-on: ubuntu-latest
+    
+    
+    env:
+      TF_VAR_region: "eu-central-1"
+      TF_VAR_env: "dev"
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      
+      - name: Terraform Init
+        working-directory: ./Network
+        run: terraform init
+
+      - name: Terraform Plan
+        working-directory: ./Network
+        run: terraform plan
