@@ -16,6 +16,7 @@ variable "private_subnet_cidr" {
 variable "env" {
     description = "Name of environment"
     type = string
+    default = "dev"
   
 }
 
