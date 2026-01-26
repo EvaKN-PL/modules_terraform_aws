@@ -1,3 +1,11 @@
+terraform {
+  backend "s3" {
+    bucket = "terraform-project-bucket-8479"
+    key = "test/vpc/terraform.tfstate"
+    region = "eu-central-1"
+  }
+}
+
 provider "aws" {
     region = var.region
   
