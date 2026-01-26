@@ -13,10 +13,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # Tutaj wpisujesz pełne ścieżki do folderów, w których masz pliki .tf
         module-path: 
           - "Network/modules/vpc"
-          - "S3_bucket/modules/s3_bucket" # dopasuj tę ścieżkę do faktycznej lokalizacji S3
+          - "S3_bucket/modules/s3_bucket"
 
     steps:
       - name: Checkout Code
@@ -26,7 +25,6 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-        # Teraz używamy pełnej ścieżki z macierzy
         working-directory: ./${{ matrix.module-path }}
         run: terraform init -backend=false
 
